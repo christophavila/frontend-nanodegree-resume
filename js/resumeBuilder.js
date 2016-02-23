@@ -205,6 +205,7 @@ var projects = {
 //--------------------------------------
 // BIO
 //--------------------------------------
+
  var formattedName = HTMLheaderName.replace("%data%", bio.name);
  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
@@ -230,10 +231,11 @@ var projects = {
  $('#header').append(bioMessage);
 
 
+
 //--------------------------------------
 // BIO.SKILLS
 //--------------------------------------
-if (bio.skills.lenght !== 0) {
+	if (bio.skills.lenght !== 0) {
 
  $("#header").append(HTMLskillsStart);
 
