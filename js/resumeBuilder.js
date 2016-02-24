@@ -3,159 +3,45 @@ This is empty on purpose! Your code to build the resume will go here.
 */
 
 //--------------------------------------
-// Ejercicio_1
-//--------------------------------------
-// $("#main").append("Chris Avila");
-//--------------------------------------
-
-
-//--------------------------------------
-// Ejercicio_2
-//--------------------------------------
-// var awesomeThoughts = "I am ChrisAvila and I am AWESOME!";
-// var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
-// $("#main").append(funThoughts);
-// console.log(awesomeThoughts);
-// console.log(funThoughts);
-//--------------------------------------
-
-
-//--------------------------------------
-// Ejercicio_3
-//--------------------------------------
-// var name = "Chris Avila";
-// var formattedName = HTMLheaderName.replace("%data%", name);
-// var role = "Web Developer";
-// var formattedRole = HTMLheaderRole.replace("%data%", role);
-// $("#header").prepend(formattedRole);
-// $("#header").prepend(formattedName);
-//
-// var skills = ["smart", "programming", "html", "css", "js"];
-// $("#main").append(skills);
-// $("#main").append(skills[0]);
-// $("#main").append(skills.lenght);
-//--------------------------------------
-
-
-//--------------------------------------
-// Ejercicio_4
-//--------------------------------------
-//var bio = {
-//	"name": "Chris Avila",
-//	"role": "Solutions Architect",
-//
-//	"contacts": {
-//		"mobile": "52-1-55-61049160",
-//		"email": "avila.christopher@gmail.com",
-//		"github": "christophavila",
-//		"location": "Mexico",
-//		},
-//
-//	"welcomeMessage": "Bienvenidos a mi sitio",
-//	"skills": [
-//		"smart", "programming", "html", "css", "js"
-//		],
-//	"bioPic": "images/fry.jpg"
-//};
-//
-// $("#main").append(bio.name);
-// bio.city =  "CDMX";
-// bio.twitter = "@christophavila";
-// $("#main").append(bio.city);
-// $("#main").append(bio["city"]);
-//--------------------------------------
-
-//--------------------------------------
-// Ejercicio_5
-//--------------------------------------
-// var work = {};
-// work.position = "FE-ND Student";
-// work.employer = "Udacity";
-// work.years = 0.5;
-//
-// var education = {};
-// education["name"] = "UNAM";
-// education["years"] = "1997-2001";
-// education["city"] = "Mexico";
-//
-// $("#main").append(work["position"]);
-// $("#main").append(education.name);
-//--------------------------------------
-
-
-//--------------------------------------
-// Ejercicio_6
-//--------------------------------------
-//var education = {
-//	"schools": [{
-//		"name": "UNAM",
-//		"city": "Mexico",
-//		"degree": "BA",
-//		"major": ["CompEng"],
-//		"dates": 2001
-//	}, {
-//		"name": "ITAM",
-//		"city": "Mexico",
-//		"degree": "Master",
-//		"major": ["ComSci"],
-//		"dates": 2015
-//	}],
-//	"onlineCourses": [{
-//		"name": "JavaScript",
-//		"school": "Udacity",
-//		"degree": "FE-ND",
-//		"major": ["WebDeveloper"],
-//		"dates": 2016
-//	}]
-//}
-// $("#main").append(work["position"]);
-// $("#main").append(education.name);
-//--------------------------------------
-
-
-
-//--------------------------------------
 // OBJECTS
 //--------------------------------------
 var bio = {
 	"name": "Christopher Avila",
 	"role": "ICT Consultant",
-	"welcomeMessage": "Welcome to my Site that has been built in Udacity FE-ND",
 	"contacts": {
-		"mobile": "52-1-55-61049160",
+		"mobile": "+5215561049160",
 		"email": "avila.christopher@gmail.com",
 		"github": "christophavila",
 		"twitter": "@christophavila",
 		"location": "Mexico"
 	},
+	"welcomeMessage": "Welcome to my site that has been built during Udacity FE-ND",
 	"skills": [
-		"programming", "html/css/js", "IMS", "UnifiedComms"
+	"programming", "html/css/js", "IMS", "UnifiedComms"
 	],
-	"bioPic": "images/mypic.jpg"
+	"biopic": "images/mypic.jpg"
 };
 
 var education = {
 	"schools": [{
 		"name": "UNAM",
 		"location": "Mexico",
-		"degree": "BA",
-		"major": ["CompEng"],
+		"degree": "Bachelor Degree",
+		"majors": ["Computer Systems Engineer"],
 		"dates": 2001,
 		"url": "https://unam.mx"
 	}, {
 		"name": "ITAM",
 		"location": "Mexico",
-		"degree": "Master",
-		"major": ["ComSci"],
+		"degree": "Master Degree",
+		"majors": ["Computer Science"],
 		"dates": 2015,
 		"url": "https://itam.mx"
 	}],
 	"onlineCourses": [{
-		"name": "JavaScript",
-		"location": "San Francisco",
-		"degree": "FE-ND",
-		"major": ["WebDeveloper"],
-		"dates": 2016,
+		"title": "FrontEnd NanoDegree",
+		"school": "Udacity",
+		"date": 2016,
 		"url": "https://udacity.com"
 	}]
 };
@@ -179,7 +65,7 @@ var work = {
 		"location": "Washington DC",
 		"dates": "20012-2015",
 		"description": "Supporting pre-sales technical activities forBroadSoft’s flagship Unified Communications Platforms and Mobile Applications (BroadWorks, BroadCloud, BroadTouch)"
-	 	}]
+	}]
 };
 
 var projects = {
@@ -205,79 +91,79 @@ var projects = {
 //--------------------------------------
 // BIO
 //--------------------------------------
+bio.display = function(){
 
- var formattedName = HTMLheaderName.replace("%data%", bio.name);
- var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
- var contactMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
- var contactEmail = HTMLemail.replace("%data%", bio.contacts.email);
- var contactTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
- var contactGithub = HTMLgithub.replace("%data%", bio.contacts.github);
- var contactLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+//var contactMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var contactEmail = HTMLemail.replace("%data%", bio.contacts.email);
+var contactTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+var contactGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+var contactLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
- var bioPicture = HTMLbioPic.replace('%data%', bio.bioPic);
- var bioMessage = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+var bioPicture = HTMLbioPic.replace('%data%', bio.biopic);
+var bioMessage = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
 
- $("#header").prepend(formattedRole);
- $("#header").prepend(formattedName);
+$("#header").prepend(formattedRole).prepend(formattedName);
 
- $("#header").append(contactMobile);
- $("#header").append(contactEmail);
- $("#header").append(contactTwitter);
- $("#header").append(contactGithub);
- $("#header").append(contactLocation);
+$("#topContacts").append(contactEmail)
+.append(contactTwitter)
+.append(contactGithub)
+.append(contactLocation);
 
- $('#header').append(bioPicture);
- $('#header').append(bioMessage);
+$("#footerContacts").append(contactEmail)
+.append(contactTwitter)
+.append(contactGithub)
+.append(contactLocation);
 
+$("#header").prepend(bioPicture).append(bioMessage);
 
+if (bio.skills.lenght !== 0) {
 
-//--------------------------------------
-// BIO.SKILLS
-//--------------------------------------
-	if (bio.skills.lenght !== 0) {
+	$("#header").append(HTMLskillsStart);
 
- $("#header").append(HTMLskillsStart);
-
- var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
- $("#skills").append(formattedSkill);
- formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
- $("#skills").append(formattedSkill);
- formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
- $("#skills").append(formattedSkill);
- formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
- $("#skills").append(formattedSkill);
+	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+	$("#skills").append(formattedSkill);
 
 }
+};
 
+bio.display ();
 
 //--------------------------------------
-// JOBS
+// WORK
 //--------------------------------------
+//function displayWork() {
+work.display = function() {
 
-function displayWork() {
- for (job in work.jobs) {
-	$("#workExperience").append(HTMLworkStart);
+	for (job in work.jobs) {
+		$("#workExperience").append(HTMLworkStart);
 
-	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-	var formattedEmployerTitle = formattedEmployer + formattedTitle;
-	$(".work-entry:last").append(formattedEmployerTitle);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+		var formattedEmployerTitle = formattedEmployer + formattedTitle;
+		$(".work-entry:last").append(formattedEmployerTitle);
 
-	var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-    $(".work-entry:last").append(formattedDates);
+		var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+		$(".work-entry:last").append(formattedDates);
 
-    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
-    $(".work-entry:last").append(formattedDescription);
- }
-}
-
-displayWork ();
+		var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+		$(".work-entry:last").append(formattedDescription);
+	}
+};
+//displayWork ();
+work.display ();
 
 //--------------------------------------
 // PROJECTS
 //--------------------------------------
-
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
@@ -299,8 +185,51 @@ projects.display = function() {
 		}
 
 	}
-}
+};
 projects.display ();
+
+//--------------------------------------
+// EDUCATION.SCHOOLS
+//--------------------------------------
+//function displaySchools() {
+education.display = function() {
+	for (school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+
+		var eduSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		var eduSchoolDeg = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		var eduSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		var eduSchoolLoc = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		var eduSchoolMaj = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+
+		$(".education-entry:last").append(eduSchoolName)
+		.append(eduSchoolDates)
+		.append(eduSchoolLoc)
+		.append(eduSchoolMaj);
+	}
+};
+//displaySchools ();
+education.display ();
+
+//--------------------------------------
+// EDUCATION.ONLINE
+//--------------------------------------
+
+function displayOnline() {
+	for (course in education.onlineCourses) {
+
+		var onlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+		var onlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+		var onlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
+		var onlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+
+		$(".education-entry:last").append(HTMLonlineClasses)
+		.append(onlineTitle)
+		.append(onlineDates)
+		.append(onlineURL);
+	}
+};
+displayOnline ();
 
 //--------------------------------------
 // InternationalizationButtonFunction
@@ -310,14 +239,14 @@ function inName(name) {
 // Needs to be added because of error:
 // "Uncaught TypeError: Cannot read property ‘trim’ of undefined"
 // https://discussions.udacity.com/t/uncaught-typeerror-cannot-read-property-trim-of-undefined/41446/5
-  var name = $('#name').html();
+var name = $('#name').html();
 
-	name = name.trim().split(" ");
-	console.log(name);
-	name[1] = name[1].toUpperCase();
-	name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+name = name.trim().split(" ");
+console.log(name);
+name[1] = name[1].toUpperCase();
+name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
 
-	return name[0] +" "+name[1];
+return name[0] +" "+name[1];
 
 }
 
